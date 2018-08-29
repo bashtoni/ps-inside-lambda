@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'List processes inside the Lambda container
+
+  '
+Resources:
+  PSFunction:
+    Properties:
+      CodeUri: s3://foo-customcfntesting/b4bcb7b77d28cc23422fcfe4ecc7be8f
+      FunctionName: ps
+      Handler: ps
+      MemorySize: 128
+      Runtime: go1.x
+      Timeout: 30
+      Tracing: Active
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
